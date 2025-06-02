@@ -229,11 +229,11 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: HyunJun
         # Author title
-        author_title: Your title
+        author_title: Full Stack Developer
         # Author's current location
-        location: Your location
+        location: Seoul, South Korea
         # URL or path to the avatar image
         avatar: 
         # Whether show the rounded avatar image
@@ -241,7 +241,7 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/hyunjunhwang1994
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
