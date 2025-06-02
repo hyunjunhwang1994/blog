@@ -26,7 +26,7 @@ tags:
 
 ```shell
 sudo ufw status
-sudo utf disable
+sudo ufw disable
 ```
 
 ## 네트워크 설정
