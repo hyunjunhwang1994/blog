@@ -20,9 +20,7 @@ tags:
 쿠버네티스 클러스터는 노드 간 다양한 포트를 통해 통신해야 한다. 
 설정을 단순화하기 위해 ufw 방화벽을 비활성화 한다.
 
-주의: 프로덕션 환경에서는 필요한 포트만 선별적으로 열어야 합니다.
-
-<br/>
+주의: 프로덕션 환경에서는 필요한 포트만 선별적으로 열어야 한다.
 
 ```shell
 sudo ufw status
@@ -42,11 +40,8 @@ EOF
 
 #### 각 모듈의 역할
 
-| overlay | br_netfilter |
-|---------|--------------|
-|서로 다른 호스트의 파드 간 통신을 위한 오버레이 네트워크 생성| 브리지를 통과하는 트래픽에 iptables 규칙 적용 가능|
-
 ##### overlay
+- 서로 다른 호스트의 파드 간 통신을 위한 오버레이 네트워크 생성
 - overlay는 리눅스 커널의 네트워크 드라이버를 가리킨다. 
 - overlay는 서로 다른 호스트에 존재하는 파드 간의 네트워크 연결을 가능하게 하는 기술이다.
 - 즉, overlay를 활용하면 여러 개의 독립적인 네트워크 레이어를 겹쳐서 하나로 연결된 네트워크를 생성한다. 
@@ -54,6 +49,7 @@ EOF
 - 따라서 overlay를 입력하면 시스템 부팅 시 overlay 네트워크 드라이버를 로드하도록 설정한다.
 
 ##### br_netfilter
+- 브리지를 통과하는 트래픽에 iptables 규칙 적용 가능
 - br_netfilter는 네트워크 패킷 처리 관련 모듈로써, 
 - iptables/netfilter 규칙이 적용되게 한다. 
 - 즉, 컨테이너와 호스트 간의 인터페이스 등에서 발생하는 트래픽에 대해 규칙을 적용해 트래픽을 관리한다는 의미이다.
@@ -77,11 +73,10 @@ EOF
 ```
 
 #### 각 설정의 의미
+net.bridge.bridge-nf-call-iptables = 1 : 브리지를 통과하는 IPv4 트래픽에 iptables 규칙 적용
+net.bridge.bridge-nf-call-ip6tables = 1 : 브리지를 통과하는 IPv6 트래픽에 iptables 규칙 적용
+net.ipv4.ip_forward = 1 : IPv4 패킷 포워딩 활성화 (라우터 기능)
 
-|net.bridge.bridge-nf-call-iptables|브리지를 통과하는 IPv4 트래픽에 iptables 규칙 적용|
-|---|---|
-|net.bridge.bridge-nf-call-ip6tables = 1|브리지를 통과하는 IPv6 트래픽에 iptables 규칙 적용|
-|net.ipv4.ip_forward|IPv4 패킷 포워딩 활성화 (라우터 기능) |
 
 #### 설정 적용
 재부팅 없이 변경된 sysctl 설정을 즉시 적용한다.
