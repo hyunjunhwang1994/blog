@@ -1,5 +1,5 @@
 ---
-title: HomeServer01
+title: 홈 서버 구축기 01 - 우분투 설치
 date: 2025-06-09 19:30:00
 categories: home-server
 tags:
@@ -24,26 +24,26 @@ tags:
   - 전기세
 
 해서 아래와 같은 스펙으로 간단하게 맞추게 되었다.
-{% asset_link 01-01.png %}
+{% asset_img 01-01.png %}
 
 
 
 영롱 그잡채...
-{% asset_link 01-02.jpg %}
+{% asset_img 01-02.jpg %}
 
 
 우분투가 담긴 usb를 PC에 연결해 OS 설치 작업했으며, 필자는 CLI 환경만 설치했다.
 
 설레는 우분투 설치 과정
-{% asset_link 01-03.jpg %}
+{% asset_img 01-03.jpg %}
 
 
 일부로 WIFI를 지원하는 메인 보드를 사서 편하게 설치했다.
-{% asset_link 01-04.jpg %}
+{% asset_img 01-04.jpg %}
 
 
 스토리지 설정은 아래처럼 진행하였다.
-{% asset_link 01-05.jpg %}
+{% asset_img 01-05.jpg %}
 
 
 마지막쯤에, 꼭 openssh 설치에 체크해주자.
