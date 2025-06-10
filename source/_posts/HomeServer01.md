@@ -1,5 +1,5 @@
 ---
-title: 홈 서버 구축기 01 - 우분투 설치
+title: HomeServer01
 date: 2025-06-09 19:30:00
 categories: home-server
 tags:
