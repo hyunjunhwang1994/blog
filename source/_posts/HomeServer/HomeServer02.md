@@ -84,6 +84,7 @@ https://dnschecker.org/
 그리고 아래와 같이 CNAME을 설정한다.
 ![](/images/HomeServer02-07.pngrver02-07.png)
 
+
 아래와같이 포트포워딩을 추가한다.
 ![](/images/HomeServer02-08.pngrver02-08.png)
 
