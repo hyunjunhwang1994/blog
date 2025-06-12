@@ -41,7 +41,7 @@ ID는 우분투 설치할때 만든 ID로 설정하면 된다.
 
 필자는 1.241.82.207 IP로 나오며 해당 IP로 웹에 접속 시, 아래처럼 공유기 관리자 페이지가 나온다.
 
-![](/images/HomeServer02-01.pngrver02-01.png)
+![](/images/HomeServer02-01.png)
 
 공유기 비밀번호 변경 관련 내용은 생략한다. (변경하는 것을 추천)
 
@@ -55,38 +55,38 @@ http://192.168.45.1/start.asp
 일단, 저 1.241. IP는 유동적으로 변경되므로 DDNS를 사용해 볼 것이다.
 
 freedns.afraid.org에 가입하여 진행한다.
-![](/images/HomeServer02-02.pngrver02-02.png)
+![](/images/HomeServer02-02.png)
 
 Add a subdomain을 클릭한다.
 
 아래 이미지처럼 아까 나온 유동 IP를 입력한후 save한다.
-![](/images/HomeServer02-03.pngrver02-03.png)
+![](/images/HomeServer02-03.png)
 
 내부의 공유기 관리자 페이지로 접근한다.
 
 freedns의 계정, 비번과 등록한 도메인 정보로 적용 시켜준다.
 
-![](/images/HomeServer02-04.pngrver02-04.png)
+![](/images/HomeServer02-04.png)
 
 아래 사이트에서 전파가 될 때 까지 기다린다.
 https://dnschecker.org/
-![](/images/HomeServer02-05.pngrver02-05.png)
+![](/images/HomeServer02-05.png)
 
 
 전파가 끝나면, 해당 도메인으로 유동 IP에 접근 가능하며 공유기에 설정했기 때문에, 
 도메인과 변경되는 유동IP가 자동으로 연결된다.
-![](/images/HomeServer02-06.pngrver02-06.png)
+![](/images/HomeServer02-06.png)
 
 
 이제 필자는 가지고 있는 가비아 도메인을 활용하여 도메인이 저 DDNS 주소를 바라보게 할 것이다.
 일단 네임서버를 기본 가비아가 아닌 변경했다면 가비아로 돌려야한다.
 
 그리고 아래와 같이 CNAME을 설정한다.
-![](/images/HomeServer02-07.pngrver02-07.png)
+![](/images/HomeServer02-07.png)
 
 
 아래와같이 포트포워딩을 추가한다.
-![](/images/HomeServer02-08.pngrver02-08.png)
+![](/images/HomeServer02-08.png)
 
 
 그 다음 외부에서 SSH Client Tool (putty 등)로
@@ -107,19 +107,23 @@ ssh.hyunjun.kr(80) --> hyunjun.mooo.com(80) ---freedns---> 1.241.82.207(80) --> 
 해서 아래처럼 편법으로 관리자 페이지를 막는다.
 
 가비아에서 루트 도메인 hyunjun.kr을 cname으로 추가적으로 설정해준다.
-![](/images/HomeServer02-09.pngrver02-09.png)
+![](/images/HomeServer02-09.png)
 
 
 그리고 공유 관리자 페이지에서 아래처럼 80을 포트포워딩 해주면,
-![](/images/HomeServer02-10.pngrver02-10.png)
+![](/images/HomeServer02-10.png)
 
 
 
 이제, 아까 나열했던 3가지 주소들로 접근해도 관리자 페이지가 열리지 않는다. (80포트를 홈서버의 80에 연결한 것)
-![](/images/HomeServer02-11.pngrver02-11.png)
+![](/images/HomeServer02-11.png)
 
 해서 공유기 관리자 페이지는 공유기 내부 네트워크 안에서 http://192.168.45.1/ 로만 접근한다.
 이렇게 내부에서 접근할 때는 포트 포워딩 규칙에 걸리지 않는다.
 
 
+참고로 아래 설정으로 내부 IP를고정시켜주룻있다.
+![](/images/HomeServer02-12.png)
 
+최종적으로 아래와 같이 구성함.
+![](/images/HomeServer02-13.png)
