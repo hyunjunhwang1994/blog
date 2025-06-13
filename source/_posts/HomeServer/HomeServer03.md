@@ -114,6 +114,11 @@ sudo virt-install \
 생각보다 정확한 예제가 없어 힘들었으며 아래 글이 제일 참고에 도움이 되었다.
 참고 글: https://www.server-world.info/en/note?os=Ubuntu_24.04&p=kvm&f=2
 
+참고로, 물리적인 호스트 서버를 Restart 하면, 가상머신은 꺼지게 되는데 아래의 설정으로 항상 자동으로 시작하게 할 수 있다.
+```shell
+virsh autostart ubuntu2404
+```
+
 ## 6. virsh로 가상머신 관리하기
 설치가 완료된 후에는 virsh 명령어로 가상머신을 제어할 수 있다.
 
