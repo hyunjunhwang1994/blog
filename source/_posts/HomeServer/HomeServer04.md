@@ -15,6 +15,7 @@ tags:
 
 ## Nginx 설치
 1. 패키지 업데이트 및 Nginx 설치
+
 ```shell
 # 패키지 목록 업데이트
 sudo apt update
