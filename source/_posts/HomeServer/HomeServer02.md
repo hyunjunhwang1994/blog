@@ -112,7 +112,7 @@ ssh.hyunjun.kr(80) --> hyunjun.mooo.com(80) ---freedns---> 1.241.82.207(80) --> 
 ![](/images/HomeServer02-09.png)
 
 
-그리고 공유 관리자 페이지에서 아래처럼 80을 포트포워딩 해주면,
+그리고 공유기 관리자 페이지에서 아래처럼 80을 포트 포워딩 해주면,
 ![](/images/HomeServer02-10.png)
 
 
