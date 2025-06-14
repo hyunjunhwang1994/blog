@@ -129,3 +129,7 @@ ssh.hyunjun.kr(80) --> hyunjun.mooo.com(80) ---freedns---> 1.241.82.207(80) --> 
 
 최종적으로 아래와 같이 구성함.
 ![](/images/HomeServer02-13.png)
+
+참고로 이런 구조면, a.hyunjun.com:80, b.hyunjun.com:80 등을 입력해도 모두 같은 곳을 가리킨다.
+
+해서 필자의 경우는 홈 물리 서버는 1대이고 그 내에서 가상머신을 활용할 것이므로 홈서버 내에서 방화벽이나 Nginx 등으로 라우팅을 할 예정이다.
