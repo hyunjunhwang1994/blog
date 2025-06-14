@@ -95,21 +95,21 @@ sudo virt-install \
 명령을 실행하면 즉시 OS 설치 화면으로 진입하며, 화면의 안내에 따라 설치를 완료하면 된다.
 
 이런 화면이 나온다면  Continue in basic mode로 진행한다.
-![img.png](../../images/img.pngmages/img.png)
+![](/images/HomeServer03-01.png)
 
 그럼 일반적인 우분투 설치화면이 나온다. 이제 설치를 진행하면된다.
-![img_1.png](../../images/img_1.pngges/img_1.png)
+![](/images/HomeServer03-02.png)
 
 
 최종적으로 VM 생성에 성공했다. Reboot Now를 선택하자.
-![img_2.png](../../images/img_2.pngges/img_2.png)
+![](/images/HomeServer03-03.png)
 
 그럼 아래와 같이 에러가 뜰 것이다. 실제 서버라면 USB를 뺀후 엔터를 해야하지만, 지금은 엔터만 입력하면된다.
-![img_3.png](../../images/img_3.pngges/img_3.png)
+![](/images/HomeServer03-04.png)
 
 
 최종적으로 가상머신 및 우분투 설치에 성공했다.
-![img_4.png](../../images/img_4.pngges/img_4.png)
+![](/images/HomeServer03-05.png)
 
 생각보다 정확한 예제가 없어 힘들었으며 아래 글이 제일 참고에 도움이 되었다.
 참고 글: https://www.server-world.info/en/note?os=Ubuntu_24.04&p=kvm&f=2
