@@ -24,28 +24,28 @@ tags:
   - 전기세
 
 해서 아래와 같은 스펙으로 간단하게 맞추게 되었다.
-![PC 스펙](/images/HomeServer01-01.png)
+![](/images/HomeServer01-01.png)
 
 
 
 
-영롱 그잡채...
+영롱 그 잡채...
 {% asset_img 01-02.jpg %}
-![PC 내부](/images/HomeServer01-02.jpg)
+![](/images/HomeServer01-02.jpg)
 
 
 우분투가 담긴 usb를 PC에 연결해 OS 설치 작업했으며, 필자는 CLI 환경만 설치했다.
 
 설레는 우분투 설치 과정
-![우분투 설치 화면](/images/HomeServer01-03.jpg)
+![](/images/HomeServer01-03.jpg)
 
 
 일부로 WIFI를 지원하는 메인 보드를 사서 편하게 설치했다.
-![와이파이 네트워크 설정](/images/HomeServer01-04.jpg)
+![](/images/HomeServer01-04.jpg)
 
 
 스토리지 설정은 아래처럼 진행하였다.
-![스토리지 설정](/images/HomeServer01-05.jpg)
+![](/images/HomeServer01-05.jpg)
 
 
-마지막쯤에, 꼭 openssh 설치에 체크해주자.
+마지막 쯤에, 꼭 openssh 설치에 체크해주자.
