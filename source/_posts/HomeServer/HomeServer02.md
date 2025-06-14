@@ -52,6 +52,7 @@ http://192.168.45.1/start.asp
 
 
 즉, 공유기 관리자 페이지 로그인 및 관리는 내부에서(192.168...)으로 접근하고, 외부에서 오는 트래픽만 저 외부 IP를 통하게 만들 것이다.
+
 일단, 저 1.241. IP는 유동적으로 변경되므로 DDNS를 사용해 볼 것이다.
 
 freedns.afraid.org에 가입하여 진행한다.
@@ -59,7 +60,7 @@ freedns.afraid.org에 가입하여 진행한다.
 
 Add a subdomain을 클릭한다.
 
-아래 이미지처럼 아까 나온 유동 IP를 입력한후 save한다.
+아래 이미지처럼 아까 나온 유동 IP를 입력한 후 save 한다.
 ![](/images/HomeServer02-03.png)
 
 내부의 공유기 관리자 페이지로 접근한다.
@@ -92,9 +93,10 @@ https://dnschecker.org/
 그 다음 외부에서 SSH Client Tool (putty 등)로
 ssh.hyunjun.kr:8282에 연결하면 홈서버에 ssh로 연결이 될 것이다.
 
-자 지금의 대략적인 구조는 아래와 같다.
+지금의 대략적인 구조는 아래와 같다.
 
-ssh.hyunjun.kr:8282 --> hyunjun.mooo.com:8282 ---freedns---> 1.241.82.207 --> 공유기:8282>22로 포워딩 ---> 192.168.45.24:22(홈 서버)
+ssh.hyunjun.kr:8282 --> hyunjun.mooo.com:8282 ---freedns---> 1.241.82.207 --> 
+공유기:8282>22로 포워딩 ---> 192.168.45.24:22(홈 서버)
 
 이때 만약 :80 포트로 접근한다면 (브라우저에서 ssh.hyunjun.kr로)
 ssh.hyunjun.kr(80) --> hyunjun.mooo.com(80) ---freedns---> 1.241.82.207(80) --> 공유기:80, 즉 관리자 페이지가 열림
