@@ -198,3 +198,5 @@ curl http://localhost
 # 호스트에서 가상머신 IP로 테스트
 curl http://가상머신IP
 ```
+
+마지막으로 http://blog.hyunjun.kr 로 접속하여 index page를 확인한다.
