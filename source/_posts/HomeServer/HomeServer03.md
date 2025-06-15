@@ -26,7 +26,7 @@ sudo apt update
 sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients virtinst bridge-utils -y
 ```
 
-각 패키지의 역할은 다음과 같습니다.
+각 패키지의 역할은 다음과 같다.
 
 qemu-kvm: KVM 커널 모듈을 활용해 가상 하드웨어를 에뮬레이션하는 핵심 백엔드이다.
 libvirt-daemon-system: 가상머신, 스토리지, 네트워크를 관리하는 백그라운드 서비스(데몬)이다.
@@ -104,7 +104,7 @@ sudo virt-install \
 최종적으로 VM 생성에 성공했다. Reboot Now를 선택하자.
 ![](/images/HomeServer03-03.png)
 
-그럼 아래와 같이 에러가 뜰 것이다. 실제 서버라면 USB를 뺀후 엔터를 해야하지만, 지금은 엔터만 입력하면된다.
+그럼 아래와 같이 에러가 뜰 것이다. 실제 서버라면 USB를 제거 후 엔터를 입력 하면 되지만, 지금은 엔터만 입력 하면 된다.
 ![](/images/HomeServer03-04.png)
 
 
@@ -147,4 +147,4 @@ virsh destroy ubuntu2404 2>/dev/null || true
 virsh undefine ubuntu2404 --remove-all-storage 2>/dev/null || true
 ```
 
-이 과정을 통해 CLI 환경에서 KVM의 구성요소를 이해하고, 고성능 VirtIO 가상머신을 생성 및 관리할 수 있다. 💻
+이 과정을 통해 CLI 환경에서 KVM의 구성요소를 이해하고, 고성능 VirtIO 가상머신을 생성 및 관리할 수 있다.
