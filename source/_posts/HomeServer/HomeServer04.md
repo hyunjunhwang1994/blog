@@ -35,8 +35,7 @@ sudo systemctl status nginx
 ```
 
 ## 가상머신 IP 확인
-1. 가상머신 IP 확인
-   먼저 생성한 가상머신의 IP를 확인해야 합니다:
+먼저 생성한 가상머신의 IP를 확인해야 한다.
 ```shell
 # 가상머신 IP 확인
 virsh domifaddr ubuntu2404
@@ -48,11 +47,7 @@ virsh console ubuntu2404
 
 
 ## Nginx 설정 변경
-
-
-
-
-2. Nginx 가상 호스트 설정 파일 생성
+Nginx 가상 호스트 설정 파일 생성한다.
 
 ```shell
 # blog 서브도메인용 설정 파일 생성
@@ -85,7 +80,7 @@ server {
 ```
 
 
-3. 사이트 활성화
+해당 사이트 설정을 활성화 해준다.
 ```shell
 # 심볼릭 링크 생성 (사이트 활성화)
 sudo ln -s /etc/nginx/sites-available/blog.hyunjun.kr /etc/nginx/sites-enabled/
@@ -94,8 +89,7 @@ sudo ln -s /etc/nginx/sites-available/blog.hyunjun.kr /etc/nginx/sites-enabled/
 # sudo rm /etc/nginx/sites-enabled/default
 ```
 
-
-4. 설정 파일 문법 검사 및 재시작
+설정 파일 문법 검사 및 재시작
 ```shell
 # Nginx 설정 문법 검사
 sudo nginx -t
@@ -104,16 +98,14 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-
-
 ## 가상머신에 웹 서빙용 Nginx 설치 및 설정
-1. 가상머신 접속
+가상머신의 콘솔로 접속한다.
 ```shell
 # 가상머신 콘솔 접속
 virsh console ubuntu2404
 ```
 
-2. 가상머신에 Nginx 설치
+가상머신에 Nginx 설치
 ```shell
 # 패키지 업데이트
 sudo apt update
@@ -129,14 +121,14 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
 
-3. 테스트 페이지 생성
+테스트 페이지 생성
 
 # 기본 HTML 페이지 수정
 ```shell
 sudo vi /var/www/html/index.html
 ```
    
-다음 내용으로 수정
+다음 내용으로 수정한다.
 ```html
 <!DOCTYPE html>
 <html>
@@ -192,19 +184,17 @@ sudo vi /var/www/html/index.html
 
 ```
 
-5. 가상머신에서 직접 테스트
+먼저 가상머신에서 직접 테스트 해본다.
 
 ```shell
 # 가상머신 내부에서 로컬 테스트
 curl http://localhost
 ```
 
-6. 호스트에서 가상머신 테스트
+호스트에서 가상머신으로 테스트 해본다.
 
 ```shell
 # 호스트로 돌아가기 (Ctrl + ])
 # 호스트에서 가상머신 IP로 테스트
 curl http://가상머신IP
 ```
-
-
