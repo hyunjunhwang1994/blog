@@ -14,7 +14,7 @@ tags:
 필자의 도메인은 hyunjun.kr 이며 blog.hyunjun.kr 요청 시, 내부의 가상 머신으로 연결하도록 한다.
 
 ## Nginx 설치
-1. 패키지 업데이트 및 Nginx 설치
+패키지 업데이트 및 Nginx 설치를 진행한다.
 
 ```shell
 # 패키지 목록 업데이트
