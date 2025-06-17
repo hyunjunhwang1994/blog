@@ -1,7 +1,7 @@
 ---
 title: (작성중)CICD 01 - Jenkins CI CD 구축 (gitlab) 
-date: 2025-06-09 19:30:00
-categories: home-server
+date: 2025-06-17 18:30:00
+categories: CICD
 tags:
   - CICD
   - GitLab
